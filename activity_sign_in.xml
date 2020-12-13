@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".SignIn">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="217dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/hungrytime_final"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_eMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="25dp"
+        android:cursorVisible="true"
+        android:fontFamily="@font/quicksand_medium"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:textColor="#0E0E0E"
+        android:textColorHighlight="#9EF3F3"
+        android:textColorHint="#7A7979"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_password" />
+
+    <TextView
+        android:id="@+id/lbl_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Password"
+        android:textColor="#212121"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="335dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:onClick="signIn"
+        android:text="Sign In"
+        android:textColor="#2196F3"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_dontHaveAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="10dp"
+        android:cursorVisible="true"
+        android:fontFamily="@font/quicksand_medium"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#222020"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#9EF3F3"
+        android:textColorHint="#787777"
+        android:textColorLink="#272525"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_eMail" />
+
+    <TextView
+        android:id="@+id/lbl_dontHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Don't have an account yet?"
+        android:textColor="#0B0A0A"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_SignUp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <TextView
+        android:id="@+id/lbl_eMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="E-Mail"
+        android:textColor="#212121"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/lbl_SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="111dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:onClick="signUp"
+        android:text="Sign up here!"
+        android:textColor="#77DD76"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_dontHaveAccount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
